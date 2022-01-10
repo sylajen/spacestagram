@@ -1,7 +1,7 @@
 :root {
   --purple: rgb(169, 0, 202);
   --white: #ffffff;
-  --offwhite: #dfdfdf;
+  --offWhite: #333333;
   --black: #000000;
   --offBlack: #333333;
   --transDuration: 1s;
@@ -56,11 +56,11 @@ h2 {
 }
 
 .btn:hover {
-  background-color: var(--btnBg);
+  background-color: var(--border);
   color: var(--btnFontColor);
 }
 
-.btn:focus { outline-style: none; }
+.btn:focus { outline-style: var(--black); }
 
 .navbar{
   position: relative;
@@ -118,6 +118,7 @@ h2 {
 .nav-items{
   height: 22px;
   position: relative;
+  display: inline-block;
 }
 
 .icon{
