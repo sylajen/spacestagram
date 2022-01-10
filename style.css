@@ -4,6 +4,7 @@
   --offwhite: #dfdfdf;
   --black: #000000;
   --offBlack: #333333;
+  --transDuration: 1s;
 }
 
 * {
@@ -17,6 +18,7 @@
   --btnBg: var(--black);
   --btnFontColor: var(--purple);
   --border: var(--offWhite);
+  transition-duration: var(--transDuration);
 }
 
 .dark-theme {
@@ -25,17 +27,13 @@
   --btnBg: var(--white);
   --btnFontColor: var(--purple);
   --border: var(--offBlack);
+  transition-duration: var(--transDuration);
 }
 
 body {
     background: var(--bg);
 }
-  
-h1 {
-  color: rgb(169, 0, 202);
-  margin-left: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 h2 {
   margin-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -48,12 +46,18 @@ h2 {
   top: -17.5px;
   left: -100px;
   height: 50px;
-  width: 50px;
+  width: 125%;
   border-radius: 50%;
   border: none;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
-  display: block;
+  display: inline-block;
+  transition-duration: var(--transDuration);
+}
+
+.btn:hover {
+  background-color: var(--btnBg);
+  color: var(--btnFontColor);
 }
 
 .btn:focus { outline-style: none; }
@@ -66,9 +70,10 @@ h2 {
   height: 50px;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
-  display: flex;
+  display: block;
   justify-content: left;
   padding: 5px 0;
+  transition-duration: var(--transDuration);
 }
 
 .nav-wrapper{
@@ -82,18 +87,18 @@ h2 {
 }
 
 .brand-img{
-  height: 200%;
+  width: 25%;
   margin-top: 5px;
   margin-left: 30px;
   justify-content: left;
   border: 1px transparent;
-  display: block;
+  display: inline-block;
 }
 
 .search-box{
   position: relative;
   transform: translateX(-50%);
-  width: 200px;
+  width: 25%;
   height: 25px;
   background: border;
   border: 1px solid border;
@@ -103,7 +108,7 @@ h2 {
   text-transform: capitalize;
   justify-content: center;
   align-items: center;
-  display: block;
+  display: inline-block;
 }
 
 .search-box::placeholder{
