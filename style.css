@@ -53,6 +53,7 @@ h2 {
   border: none;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
+  display: block;
 }
 
 .btn:focus { outline-style: none; }
@@ -86,6 +87,7 @@ h2 {
   margin-left: 30px;
   justify-content: left;
   border: 1px transparent;
+  display: block;
 }
 
 .search-box{
@@ -101,6 +103,7 @@ h2 {
   text-transform: capitalize;
   justify-content: center;
   align-items: center;
+  display: block;
 }
 
 .search-box::placeholder{
