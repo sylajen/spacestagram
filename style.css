@@ -1,7 +1,7 @@
 :root {
   --purple: rgb(169, 0, 202);
   --white: #ffffff;
-  --offWhite: #333333;
+  --offWhite: #c9c9c9;
   --black: #000000;
   --offBlack: #333333;
   --transDuration: 1s;
@@ -11,56 +11,6 @@
   color: var(--fontColor);
   font-family: helvetica;
 }
-
-.light-theme {
-  --bg: var(--white);
-  --fontColor: var(--black);
-  --btnBg: var(--black);
-  --btnFontColor: var(--purple);
-  --border: var(--offWhite);
-  transition-duration: var(--transDuration);
-}
-
-.dark-theme {
-  --bg: var(--black);
-  --fontColor: var(--white);
-  --btnBg: var(--white);
-  --btnFontColor: var(--purple);
-  --border: var(--offBlack);
-  transition-duration: var(--transDuration);
-}
-
-body {
-    background: var(--bg);
-}
-
-h2 {
-  margin-left: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.btn {
-  position: relative;
-  justify-content: left;
-  align-items: center;
-  top: -17.5px;
-  left: -100px;
-  height: 50px;
-  width: 125%;
-  border-radius: 50%;
-  border: none;
-  color: var(--btnFontColor);
-  background-color: var(--btnBg);
-  display: inline-block;
-  transition-duration: var(--transDuration);
-}
-
-.btn:hover {
-  background-color: var(--border);
-  color: var(--btnFontColor);
-}
-
-.btn:focus { outline-style: var(--black); }
 
 .navbar{
   position: relative;
@@ -86,6 +36,12 @@ h2 {
   align-items: center;
 }
 
+.nav-items{
+  height: 22px;
+  position: relative;
+  display: inline-block;
+}
+
 .brand-img{
   width: 25%;
   margin-top: 5px;
@@ -93,6 +49,10 @@ h2 {
   justify-content: left;
   border: 1px transparent;
   display: inline-block;
+}
+/* Change the background color on mouse-over */
+.brand-img:hover {
+  cursor: pointer;
 }
 
 .search-box{
@@ -115,11 +75,117 @@ h2 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.nav-items{
-  height: 22px;
+.btn {
   position: relative;
+  justify-content: left;
+  align-items: center;
+  top: -17.5px;
+  left: -100px;
+  height: 50px;
+  width: 125%;
+  border-radius: 50%;
+  border: none;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
   display: inline-block;
+  transition-duration: var(--transDuration);
 }
+
+.btn:hover {
+  background-color: var(--border);
+  color: var(--btnFontColor);
+  cursor: pointer;
+}
+
+.btn:focus { outline-style: var(--black); }
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+}
+
+.light-theme {
+  --bg: var(--white);
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--purple);
+  --border: var(--offWhite);
+  transition-duration: var(--transDuration);
+}
+
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--white);
+  --btnBg: var(--white);
+  --btnFontColor: var(--purple);
+  --border: var(--offBlack);
+  transition-duration: var(--transDuration);
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+body {
+    background: var(--bg);
+}
+
+h2 {
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 .icon{
   height: 100%;
