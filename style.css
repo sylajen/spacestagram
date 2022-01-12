@@ -56,16 +56,16 @@
 }
 
 .search-box{
-  position: relative;
-  transform: translateX(-50%);
+  position: fixed;
+  transform: translateX(150%);
   width: 25%;
   height: 25px;
   background: border;
   border: 1px solid border;
-  border-radius: 2px;
+  border-radius: 10px;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
-  text-transform: capitalize;
+  text-transform: none;
   justify-content: center;
   align-items: center;
   display: inline-block;
@@ -76,17 +76,17 @@
 }
 
 .btn {
-  position: relative;
-  justify-content: left;
-  align-items: center;
-  top: -17.5px;
-  left: -100px;
+  position: fixed;
+  top: 10px;
   height: 50px;
-  width: 125%;
+  width: 50px;
+  transform: translateX(100%);
   border-radius: 50%;
   border: none;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
+  justify-content: center;
+  align-items: center;
   display: inline-block;
   transition-duration: var(--transDuration);
 }
@@ -99,12 +99,46 @@
 
 .btn:focus { outline-style: var(--black); }
 
+
+/*****CODE FOR AVATAR*****/
+/*Avatar size variables*/
 .avatar {
+  justify-content: right;
   vertical-align: middle;
+  transform: translateX(1000%);
+  margin-top: -25px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  z-index: 2;
 }
+
+.avatar div {
+  position: fixed;
+  display: inline-block;
+
+}
+
+.avatarBG {
+  justify-content: right;
+  vertical-align: middle;
+  transform: translateX(1000%);
+  margin-top: -30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  z-index: 1;
+}
+
+.avatarBG div {
+  position: fixed;
+  display: inline-block;
+}
+
 
 .light-theme {
   --bg: var(--white);
@@ -174,6 +208,7 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+  .brand-img {size: 50px;}
   .avatar {size: 50px;}
 }
 
@@ -185,8 +220,6 @@ h2 {
   margin-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-
 
 .icon{
   height: 100%;
