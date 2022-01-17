@@ -26,3 +26,17 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   x.classList.toggle("change");
 }
+
+/*
+function searchQuery() {
+  starts at this format
+      https://images-api.nasa.gov/search
+  searchBox.getString() = "https://images.nasa.gov/search-results?q=" + string + "&page=1&media=image&yearStart=1920&yearEnd=2022" // "q=apollo 11";
+  once I get to the URL of what the user searched, then I can grab each individual pic
+  from the site and show them (technically doesn't have to be in order)
+
+  
+  should look like this format
+    https://images.nasa.gov/search-results?q=rocket&page=1&media=image&yearStart=1920&yearEnd=2022
+
+*/
