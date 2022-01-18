@@ -30,7 +30,7 @@
 
 .nav-wrapper{
   width: 100%;
-  max-width: 1000px;
+  max-width: display-width;
   height: 100%;
   position: relative;
   display: flex;
@@ -45,12 +45,13 @@
 }
 
 .brand-img{
-  width: 25%;
+  width: 250px;
   margin-top: -10px;
   margin-left: 30px;
   justify-content: left;
   border: 1px transparent;
   display: inline-block;
+  align-items: center;
 }
 /* Change the background color on mouse-over */
 .brand-img:hover {
@@ -86,10 +87,10 @@
 /*ANY BUTTONS CAN USE THIS*/
 .btn {
   position: fixed;
-  top: 10px;
+  top: 5px;
   height: 50px;
   width: 50px;
-  transform: translateX(100%);
+  transform: translateX(-500%);
   border-radius: 50%;
   border: none;
   color: var(--btnFontColor);
@@ -108,6 +109,11 @@
 
 .btn:focus { outline-style: var(--black); }
 
+.toggleDark {
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
 
 /*****CODE FOR AVATAR*****/
 /***Ensure when changing something for avatar, avatarBG is changed accordingly***/
@@ -115,14 +121,10 @@
 .avatar {
   justify-content: right;
   vertical-align: middle;
-  transform: translateX(450%);
-  margin-top: 0px;
-  margin-right: 1%;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  display: inline-block;
   position: fixed;
+  border-radius: 50%;
   z-index: 2;
 }
 
@@ -136,19 +138,16 @@
 .avatarBG {
   justify-content: right;
   vertical-align: middle;
-  transform: translateX(450%);
-  margin-top: 0px;
-  margin-right: 1%;
+  margin-right: 100px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  display: inline-block;
-  position: fixed;
+  position: flex;
   z-index: 1;
 }
 
 .avatarBG div {
-  position: fixed;
+  position: flex;
   display: inline-block;
 }
 
@@ -196,7 +195,9 @@
 }
 
 /*MENU ICON*/
-.container {
+.container { 
+  transform: translateX(-300%);
+  margin-top: 5px;
   display: inline-block;
   cursor: pointer;
 }
@@ -277,8 +278,6 @@
   .avatar {size: 50px;}
   .avatarBG {size:50px;}
 }
-
-
 
 body {
     background: var(--bg);
