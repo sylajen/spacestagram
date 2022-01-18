@@ -14,6 +14,7 @@
 
 .navbar{
   position: top;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,6 +25,7 @@
   justify-content: left;
   padding: 5px 0;
   transition-duration: var(--transDuration);
+  z-index: 3;
 }
 
 .nav-wrapper{
@@ -76,6 +78,12 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+.hide-search-box{
+  display: none;
+}
+
+
+/*ANY BUTTONS CAN USE THIS*/
 .btn {
   position: fixed;
   top: 10px;
@@ -102,6 +110,7 @@
 
 
 /*****CODE FOR AVATAR*****/
+/***Ensure when changing something for avatar, avatarBG is changed accordingly***/
 /*Avatar size variables*/
 .avatar {
   justify-content: right;
@@ -123,6 +132,7 @@
 
 }
 
+/*Avatar Background Size Variables*/
 .avatarBG {
   justify-content: right;
   vertical-align: middle;
@@ -142,7 +152,31 @@
   display: inline-block;
 }
 
+/*Change Avatar Visuals*/
+.avatarDisplay {
+  justify-content: left;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-right: 1%;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
 
+.avatarDisplay:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  z-index: 2;
+}
+
+.row {
+  display: flex;
+  max-width: 800px;
+}
+
+/*Light and Dark theme*/
 .light-theme {
   --bg: var(--white);
   --fontColor: var(--black);
@@ -200,7 +234,7 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  z-index: 3;
+  z-index: 4;
 }
 
 /* The navigation menu links */
@@ -241,37 +275,17 @@
   .sidenav a {font-size: 18px;}
   .brand-img {size: 50px;}
   .avatar {size: 50px;}
+  .avatarBG {size:50px;}
 }
+
+
 
 body {
     background: var(--bg);
 }
 
-.icons{
-  height: 500px;
-  width: 500px;
-  position: relative;
-  vertical-align: middle;
-  justify-content: center;
-}
 
 h2 {
   margin-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.icon{
-  height: 100%;
-  position: relative;
-  cursor: pointer;
-  margin-top: 10px;
-  display: inline-block;
-  justify-content: right;
-}
-
-.user-profile{
-  width: 22px;
-  border-radius: 50%;
-  background-image: url(img/profile-pic.png);
-  background-size: cover;
 }
