@@ -111,7 +111,6 @@
 
 .toggleDark {
   color: var(--btnFontColor);
-  background-color: var(--btnBg);
 }
 
 
@@ -126,19 +125,19 @@
   position: fixed;
   border-radius: 50%;
   z-index: 2;
+  cursor: pointer;
 }
 
 .avatar div {
   position: fixed;
   display: inline-block;
-
 }
 
 /*Avatar Background Size Variables*/
 .avatarBG {
   justify-content: right;
   vertical-align: middle;
-  margin-right: 100px;
+  margin-right: 0px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
