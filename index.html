@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang-"en">
+<html lang="US-en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> not sure of this -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--to make site viewable on all platforms-->
         <title>Spacestagram</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> -->
     </head>
 
     <!-- Top Navigation Bar -->
     <nav class="navbar">
         <div class="nav-wrapper">   
             <!--  -->             
-            <a href="index.html">
-                <img src="SPACESTAGRAM.png" class="brand-img" alt="Spacestagram">
-            </a>
+            <a href="index.html"> <img src="SPACESTAGRAM.png" class="brand-img" alt="Spacestagram"> </a>
 
             <div></div>
             <div></div>
             
             <input type="text" class="search-box" placeholder="Explore">  
             
-            <a href="avatars.html">
-                <img src="avatars/helmets/SpaceHelmetRed.png" alt= "Avatar" class="avatar">
-                <img src="avatars/bgs/MarsCowRovers.png" alt= "AvatarBG" class="avatarBG">
+            <a href="avatars/index.html">
+                <img src="images/helmets/SpaceHelmetRed.png" alt= "Avatar" class="avatar">
+                <img src="images/bgs/MarsCowRovers.png" alt= "AvatarBG" class="avatarBG">
             </a>
 
             <div class="container" onclick="openNav()">
@@ -40,8 +39,8 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a class="toggleDark">Dark Mode</a>
-        <a href="avatars.html">Change Avatar</a>
-        <a href="likes.html">Liked Images</a>
+        <a href="avatars/index.html">Change Avatar</a>
+        <a href="likes/index.html">Liked Images</a>
     </div>
      
 

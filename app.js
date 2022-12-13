@@ -27,8 +27,11 @@ function closeNav() {
   x.classList.toggle("change");
 }
 
+function changeImage(imageName) {
+  let img = document.querySelector("#avatar");
+  img.setAttribute('src', imageName);
+}
 
-const avatarChange = document.querySelector('.avatarClick');
 
 avatarChange.addEventListener('click', function() {
     var avatarName = "avatars/helmets/SpaceHelmetRed.png";

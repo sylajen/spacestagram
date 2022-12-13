@@ -118,7 +118,7 @@
 /*****CODE FOR AVATAR*****/
 /***Ensure when changing something for avatar, avatarBG is changed accordingly***/
 /*Avatar size variables*/
-.avatar {
+#avatar {
   justify-content: right;
   vertical-align: middle;
   width: 50px;
@@ -129,7 +129,7 @@
   cursor: pointer;
 }
 
-.avatar div {
+#avatar div {
   position: fixed;
   display: inline-block;
 }
@@ -152,7 +152,7 @@
 }
 
 /*Change Avatar Visuals*/
-.avatarDisplay {
+.avatarOptions {
   justify-content: left;
   vertical-align: middle;
   margin-top: 0px;
@@ -165,13 +165,9 @@
   transition: transform 0.3s;
 }
 
-.avatarDisplay:hover {
+.avatarOptions:hover {
   transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   z-index: 2;
-}
-
-.avatarClick {
-  
 }
 
 /*Light and Dark theme*/

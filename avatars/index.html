@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="US-en">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--to make site viewable on all platforms-->
+        <title>Spacestagram</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> -->
+    </head>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">   
+            <!--  -->             
+            <a href="../index.html">
+                <img src="../SPACESTAGRAM.png" class="brand-img" alt="Spacestagram">
+            </a>
+
+            <div></div>
+            <div></div>
+            
+            <input type="text" class="search-box" placeholder="Explore">  
+
+            <a href="../avatars/index.html">
+                <img src="../images/helmets/SpaceHelmetRed.png" alt= "Avatar" id="avatar">
+                <img src="../images/bgs/MarsCowRovers.png" alt= "AvatarBG" class="avatarBG">
+            </a>
+
+            <div class="container" onclick="openNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side Navigation Bar -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="toggleDark">Dark Mode</a>
+        <a href="../avatars/index.html">Change Avatar</a>
+        <a href="../likes/index.html">Liked Images</a>
+    </div>
+
+
+
+
+    <!-- Page Contents -->
+    <body topmargin="70px" leftmargin="40px" class="light-theme">    
+
+        <h1>Change Your Avatar</h1>
+
+        <h2>Choose a helmet</h2>
+        <hr></hr>
+        <div class="row">
+            <img src="../images/helmets/SpaceHelmetRed.png" alt= "Avatar" class="avatarOptions" onclick="changeImage('../images/helmets/SpaceHelmetRed.png')">
+            <img src="../images/helmets/SpaceHelmetOrange.png" alt= "Avatar" class="avatarOptions" onclick="changeImage('../images/helmets/SpaceHelmetOrange.png')">
+            <img src="../images/helmets/SpaceHelmetYellow.png" alt= "Avatar" class="avatarOptions" onclick="changeImage(imageName)">
+            <img src="../images/helmets/SpaceHelmetGreen.png" alt= "Avatar" class="avatarOptions" onclick="changeImage(imageName)">
+            <img src="../images/helmets/SpaceHelmetBlue.png" alt= "Avatar" class="avatarOptions" onclick="changeImage(imageName)">
+            <img src="../images/helmets/SpaceHelmetPurple.png" alt= "Avatar" class="avatarOptions" onclick="changeImage(imageName)">
+            <img src="../images/helmets/SpaceHelmetPink.png" alt= "Avatar" class="avatarOptions" onclick="changeImage(imageName)">
+            <img src="../images/helmets/SpaceHelmetWhite.png" alt= "Avatar" class="avatarOptions" onclick="changeImage(imageName)">
+        </div>
+
+        <h2>Choose an environment</h2>
+        <hr></hr>
+        <div class="row">
+            <img src="../images/bgs/MarsCowRovers.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+            <img src="../images/bgs/AsteroidBeltPlanetsCow.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+            <img src="../images/bgs/MoonCow.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+            <img src="../images/bgs/MoonTelescopeCow.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+            <img src="../images/bgs/SunMoonEarthSatCow.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+            <img src="../images/bgs/SunRocketSpaceCow.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+            <img src="../images/bgs/UFOCowAbductionV4.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+            <img src="../images/bgs/UFOCowTelescopeAbduction.png" alt= "AvatarBG" class="backgroundOptions" onclick="changeImage(imageName)">
+        </div>
+
+        <script src="app.js"></script>
+        <noscript>Doth requireth JavaScript to vieweth full page.</noscript>
+    </body>
+
+    <style type= "style.css"></style>
+    </script>
+</html>
