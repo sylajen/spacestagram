@@ -2,7 +2,6 @@
 
 const switcher = document.querySelector('.toggleDark');
 
-
 switcher.addEventListener('click', function() {
     document.body.classList.toggle('dark-theme')
     var className = document.body.className;
@@ -28,16 +27,54 @@ function closeNav() {
   x.classList.toggle("change");
 }
 
-/*
-function searchQuery() {
-  starts at this format
-      https://images-api.nasa.gov/search
-  searchBox.getString() = "https://images.nasa.gov/search-results?q=" + string + "&page=1&media=image&yearStart=1920&yearEnd=2022" // "q=apollo 11";
-  once I get to the URL of what the user searched, then I can grab each individual pic
-  from the site and show them (technically doesn't have to be in order)
 
-  
-  should look like this format
-    https://images.nasa.gov/search-results?q=rocket&page=1&media=image&yearStart=1920&yearEnd=2022
+const avatarChange = document.querySelector('.avatarClick');
+
+avatarChange.addEventListener('click', function() {
+    var avatarName = "avatars/helmets/SpaceHelmetRed.png";
+    if(avatarName == "light-theme") {
+        this.textContent = "Dark Mode";
+    }
+    else {
+        this.textContent = "Light Mode";
+    }
+
+    console.log('current profile picture: ' + avatarName);
+});
+
+/* Everything related to getting the images from NASA
+
+const spaceImage = document.getElementById('image_result');
+
+const spaceImage = [];
+const author1 = document.getElementById('author1-result');
+const author2 = document.getElementById('author2-result');
+const dateTaken = document.getElementById('dateTaken-result');*/
+
+
+
+/***************************************************************************/
+const url = 'https://api.nasa.gov/planetary/apod?api_key=';
+const api_key = config.NASA_API_KEY;
+
+const fetchNASAData = async () => {
+  try {
+    const response = await fetch('${url}${api_key}')
+    const data = await response.json()
+    console.log('NASA APOD data', data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+const displayData = data => {
+  document.getElementById('title').textContent = data.title;
+  document.getElementById('date').textContent = data.date;
+  document.getElementById('picture').textContent = data.picture;
+  document.getElementById('explanation').textContent = data.explanation;
+}
+
+fetchNASAData()
+/*
 
 */
